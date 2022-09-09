@@ -1,0 +1,18 @@
+
+async function obtener_usuarios(){
+
+   let usuarios=await fetch('https://jsonplaceholder.typicode.com/users')
+
+   let usuarios_definitivos= await usuarios.json()
+
+
+   let items=[]
+   usuarios_definitivos.forEach(element => {
+
+    let item=`<li class="list-group-item">${elemnt,username}/<li>`
+    items.push(item)
+   });
+    document.getElementById("lista_usuarios").innerHTML=items.join("")
+}
+
+obtener_usuarios()
